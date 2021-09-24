@@ -171,6 +171,12 @@
     <Content Include="Views\Home\Cli.cshtml" />
     <Content Include="Views\Home\Jogo.cshtml" />
     <Content Include="Views\Home\Func.cshtml" />
+    <Content Include="Views\Home\CadGame.cshtml" />
+    <Content Include="Views\Home\ListarGame.cshtml" />
+    <Content Include="Views\Home\CadCli.cshtml" />
+    <Content Include="Views\Home\ListarCli.cshtml" />
+    <Content Include="Views\Home\CadFunc.cshtml" />
+    <Content Include="Views\Home\ListarFunc.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

@@ -180,7 +180,7 @@ namespace LojadeJogos.Repositorio
             con.DesconectarBd();
         }
 
-        public ModelFunc ListarCodFuncionario(int cod)
+        public ModelFunc ListarCodFunc(int cod)
         {
             var comando = String.Format("select * from tblFunc where FuncCod = {0}", cod);
             MySqlCommand cmd = new MySqlCommand(comando, con.ConectarBd());
@@ -213,7 +213,7 @@ namespace LojadeJogos.Repositorio
             return AltAl;
         }
 
-        public List<ModelFunc> ListarFuncionario()
+        public List<ModelFunc> ListarFunc()
         {
             MySqlCommand cmd = new MySqlCommand("Select * from tbl_Func", con.ConectarBd());
             var DadosFunc = cmd.ExecuteReader();

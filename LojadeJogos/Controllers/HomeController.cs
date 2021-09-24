@@ -25,7 +25,7 @@ namespace LojadeJogos.Controllers
 
 
         [HttpPost]
-        public ActionResult CadJogo(ModelGame jogo)
+        public ActionResult CadGame(ModelGame jogo)
         {
             ac.CadastrarGame(jogo);
             return View(jogo);
@@ -73,10 +73,10 @@ namespace LojadeJogos.Controllers
             return View(func);
         }
 
-        public ActionResult ListarFuncionario()
+        public ActionResult ListarFunc()
         {
             var ExibeFunc = new Acoes();
-            var TodosFunc = ExibeFunc.ListarFuncionario();
+            var TodosFunc = ExibeFunc.ListarFunc();
             return View(TodosFunc);
         }
 
