@@ -102,7 +102,6 @@ namespace LojadeJogos.Repositorio
             cmd.Parameters.Add("@clinum", MySqlDbType.VarChar).Value = cliente.CliNum;
             cmd.Parameters.Add("@cliemail", MySqlDbType.VarChar).Value = cliente.CliEmail;
             cmd.Parameters.Add("@clinascdt", MySqlDbType.VarChar).Value = data_sistema;
-            cmd.ExecuteNonQuery();
             con.DesconectarBd(); 
 
         }
