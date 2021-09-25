@@ -1,0 +1,34 @@
+﻿@model IEnumerable<LojadeJogos.Models.ModelCi>
+@{
+    ViewBag.Title = "ListarCliente";
+}
+
+<p>@Html.ActionLink("Cadastrar Cliente", "Cliente")</p>
+
+<table>
+    <tr>
+        <th>@Html.DisplayNameFor(m => m.CliName)</th>
+        <th>@Html.DisplayNameFor(m => m.CliEnd)</th>
+        <th>@Html.DisplayNameFor(m => m.CliCpf)</th>
+        <th>@Html.DisplayNameFor(m => m.CliNum)</th>
+        <th>@Html.DisplayNameFor(m => m.CliEmail)</th>
+        <th>@Html.DisplayNameFor(m => m.DtCliNasc)</th>
+    </tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@Html.DisplayFor(modelItem => item.CliName)</td>
+            <td>@Html.DisplayFor(modelItem => item.CliEnd)</td>
+            <td>@Html.DisplayFor(modelItem => item.CliCpf)</td>
+            <td>@Html.DisplayFor(modelItem => item.CliNum)</td>
+            <td>@Html.DisplayFor(modelItem => item.CliEmail)</td>
+            <td>@Html.DisplayFor(modelItem => item.DtCliNasc)</td>
+
+            <td>
+                @Html.ActionLink("Alterar", "AltJogo", null, new { cdJogo = item.CliCpf }, new { @class = "btn btn-primary btn-xs" })
+                @Html.ActionLink("Deletar", "DelJogo", null, new { cdJogo = item.CliCpf }, new { @class = "btn btn-danger btn-xs" })
+            </td>
+        </tr>
+    }
+
+</table>
